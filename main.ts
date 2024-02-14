@@ -13,7 +13,7 @@ export default class QrCodePlugin extends Plugin {
 			// Obsidian gives an unpretty linebreak at the end. Don't encode it in our QR Code!
 			content = content.substring(0, content.length - 1);
 		}
-		toCanvas(destination, content);
+		toCanvas(destination, content, { margin: 1 });
 		el.appendChild(destination);
 		return;
 	}
